@@ -1,0 +1,5 @@
+.idea
+crossme.db
+*.pyc
+__pycache__
+migrations
