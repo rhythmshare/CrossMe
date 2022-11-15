@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from flask import Blueprint, render_template, request, url_for, g,flash
+from flask import Blueprint, render_template, request, url_for, g, flash
 from werkzeug.utils import redirect
 from crossme import db
 from crossme.forms import FreeboardForm, CommentForm
