@@ -49,7 +49,7 @@ def create():
         freeboard = Freeboard(subject=form.subject.data, content=form.content.data, create_date=datetime.now(), user=g.user)
         db.session.add(freeboard)
         db.session.commit()
-        return redirect(url_for('board.intro'))
+        return redirect(url_for('freeboard._list'))
     return render_template('freeboard/freeboard_form.html', form=form) # freeboard_form.html 템플릿에 전달 FreeboardForm의 객체(form)은 템플릿에서 라벨 or 입력폼 등 만들 때 사용
 
 # 자유게시판 게시글 수정
