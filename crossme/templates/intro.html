@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CrossMe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+	</head>
+	<body class="is-preload">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				{% if g.user %}
+				<ul class="navbar-nav">
+					<li class="nav-item ">
+						<a class="nav-link" href="{{ url_for('authority.logout')}}">{{ g.user.username }} (로그아웃)</a>
+					</li>
+				</ul>
+				{% else %}
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('authority.signup') }}">회원가입</a> <!-- 회원가입 이동-->
+						<a class="nav-link" href="{{ url_for('authority.login') }}">로그인</a> <!--로그인 이동-->
+					</li>
+				</ul>
+				{% endif %}
+			</div>
+		
+		</nav>
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header -->
+							<header id="header">
+								<a href="{{url_for('menu.mainpage')}}" class="logo"><strong>CrossMe</strong></a>
+								</ul>
+							</header>
+							<!-- Banner -->
+								<section id="banner" data-="">
+									<div class="content">
+										<header>
+											<h1>CrossMe<br />
+											</h1>
+											<p>원광대학교 학생이라면 누구든 이용 가능합니다!</p>
+										</header>
+										<p>크로스미는 원광대학교 학생들을 위한 과외 중개 플랫폼 입니다.</p>
+										<p>이곳은 원광대학교 학생들의 지식 공유의 장이 될 수 있으며 저희 크로스미에서 많은 것을 얻어가고 나눠주세요!</p>
+										<ul class="actions">
+											<li><a href="{{ url_for('menu.mainpage') }}" class="button big">크로스미 메인</a></li> <!--수정 2022.11.20-->
+										</ul>
+									</div>
+									<span class="image object">
+										<img src= {{url_for('static',filename='img/main_img.png')}} alt="" />  <!--수정 2022.11.20 -->
+									</span>
+								</section>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>카테고리 소개</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<!--온라인 페이지 소개-->
+											<a href="#" class="image"><img src={{url_for('static', filename='img/online.PNG')}} alt="" /></a>
+											<h3>온라인</h3>
+											<p>1 : 1 채팅으로 하는 과외 페이지</p>
+											<p>각기 다른 분야의 과외 선생님들이 있습니다.</p>
+											<p>수업을 들으면서 알 수 있는 각 분야들의 Tip을 얻어보자</p>
+											<ul class="actions">
+												<!--소개에서 온라인질문 페이지로 들어감.-->
+												<li><a href="온라질문게시.html" class="button">질문 게시판</a></li>
+											</ul>
+											<ul class="actions">
+												<!--소개에서 온라인 토론 게시판으로 들어감.-->
+												<li><a href="온라토론게시.html" class="button">토론 게시판</a></li>
+											</ul>
+										</article>
+										<!--오프라인 소개-->
+										<article>
+											<a href="#" class="image"><img src={{url_for('static', filename='img/offline.PNG')}} alt="" /></a>
+											<h3>오프라인</h3>
+											<p>신뢰도 높은 만남</p>
+											<p>원하는 분야의 과외 수업을 더 자세히 들어보자!</p>
+											<p>서로의 지식을 나누는 지식 공유의 장</p>
+											<ul class="actions">
+												<!--오프라인 구인게시판과 연결되어있다.-->
+												<li><a href="오프구인게시.html" class="button">구인 게시판</a></li>
+											</ul>
+											<ul class="actions">
+												<!--오프라인 구직게시판과 연결되어있음-->
+												<li><a href="오프구직게시.html" class="button">구직 게시판</a></li>
+											</ul>
+										</article>
+										<!--공지소개-->
+										<article>
+											<a href="#" class="image"><img src={{url_for('static', filename='img/notice.png')}} alt="" /></a>
+											<h3>공지</h3>
+											<p>아직 크로스미가 낯설지?</p>
+											<p>여기서 확실하게 짚고 넘어가자</p>
+											<p>공지사항을 확인하자</p>
+											<ul class="actions">
+												<li><a href="notice.html" class="button">바로가기</a></li>
+											</ul>
+										</article>
+										<!--신고 소개-->
+										<article>
+											<a href="#" class="image"><img src={{url_for('static',filename='img/report.PNG')}} alt="" /></a>
+											<h3>신고</h3>
+											<p>어머 누가 너한테 막대한다고?</p>
+											<p>혼쭐을 내주자고</p>
+											<p>얼른 여기에 알려!</p>
+											<ul class="actions">
+												<li><a href="report.html" class="button">바로가기</a></li>
+											</ul>
+										</article>
+										
+									</div>
+								</section>
+						</div>
+					</div>
+				<!-- Sidebar -->
+				<!--신고 페이지 옆 사이드 카테고리-->
+					<div id="sidebar">
+						<div class="inner">
+							<!--검색부분-->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+							<!-- 카테고리부분 -->
+								<nav id="menu">
+									<header class="major">
+										<h2>카테고리</h2>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">온라인</span>
+											<ul>
+												<!--온라인 질문게시판과 연결되어 있음-->
+												<li><a href="{{url_for('freeboard._list')}}">지식 공유 </a></li>
+												
+											</ul>
+										</li>
+										<li>
+											<span class="opener">오프라인</span>
+											<ul>
+												<!--오프라인 구인게시판과 연결되어있음-->
+												<!--<li><a href=#>멘토 구해요</a></li>-->
+												<!--온라인 토론 게시판과 연결되어있음-->
+												<li><a href="{{url_for('freeboard._list')}}">스터디팀 구해요</a></li>
+											</ul>
+										</li>
+										
+										
+										<li><a href="{{url_for('freeboard._list')}}">신고</a></li>
+										<!--소개페이지에서 마이페이지을 누루면 메인 화면으로 간다.-->
+									
+									</ul>
+								</nav>
+		<!--js부분은 카테고리 부분에서 온라인 오프라인 부속 부분은 접었다 펼쳤다하는 부분-->
+		<!-- Scripts -->
+			<script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='js/main.js')}}"></script>
+	</body>
+</html>

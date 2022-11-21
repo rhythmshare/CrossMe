@@ -30,11 +30,13 @@ def create_app():
     from . import models
 
     # blueprint
-    from .views import main_views, freeboard_views, comment_views, authority_views
+    from .views import main_views, freeboard_views, comment_views, authority_views, menu_views, board_views
     app.register_blueprint(main_views.bp)
+    app.register_blueprint(board_views.bp)
     app.register_blueprint(freeboard_views.bp)
     app.register_blueprint(comment_views.bp)
     app.register_blueprint(authority_views.bp)
+    app.register_blueprint(menu_views.bp)
     
     # 필터
     from .filter import format_datetime

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossMe</title>
+    <!--크로스미파일에서 menubar.css 파일 활용-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='menubar.css') }}"> <!-- 수정 2022.11.19 불필요한 코드 삭제 -->
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <!--상단바 투명-->
+            <a href="{{url_for('menu.mainpage')}}" class="headA">CrossMe</a>
+            <nav class="headB">
+                {%include "crossme_navbar.html"%}
+            </nav>
+        </div>
+    </header>
+    <!--사진 배경 남자 2명-->
+    <script src="https://kit.fontawesome.com/1835611cc0.js" crossorigin="anonymous"></script>
+    <section class="conA">
+        <div class="container">
+            <!--배경속 단어-->
+            <h1>CrossMe</h1>
+            <p>원광대학교 멘토&멘티 중개 서비스</p>
+    <!-- <a href="#">크로스미 시작하기</a>!-->
+        </div>
+    </section>
+    <section class="conB">
+        <div class="container">
+            <!--간단 소개 온오프라인,게시글,질문,토론및토의-->
+            <div class="text">
+                <span class="fa-solid fa-comment icon"></span>
+                <h2>온&오프라인</h2>
+                <p>온&오프라인 과외 매칭을 통하여 자유로운 과외 가능</p>
+                <a href="#">MORE...
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+            <div class="text">
+                <span class="fa-solid fa-address-card icon"></span>
+                <h2>게시글</h2>
+                <p>신뢰 높은 사용자가 쓴 게시판 글</p>
+                <a href="#">MORE...
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+            <div class="text">
+                <span class="fa-solid fa-list icon"></span>
+                <h2>질문</h2>
+                <p>빠른 질문 가능 게시판, 채팅</p>
+                <!--메인화면하고 온라인 질문 게시판 화면과 연결되어있음.-->
+                <a href="온라질문개시.html">MORE...
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+            <div class="text">
+                <span class="fa-solid fa-users icon"></span>
+                <h2>토론 및 토의</h2>
+                <p>서로 토의 하면서 부족한 부분이나 궁금한 지식을</p>
+                <!--메인화면에서 온라인 토론 게시판과 연결되어있음.-->
+                <a href="온라토론게시.html">MORE...
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--온라인,오프라인 간단 소개및 링크-->
+    <section class="conC">
+        <div class="container">
+            <div class="pohoto"></div>
+            <div class="text">
+                <h2>온라인</h2>
+                <p>1:1채팅으로 하는 과외 페이지.</p>
+                <p>각기 다른 분야의 과외를 선생님들이 있습니다.</p>
+                <p>수업을 들으면서 알수있는 각 분야들의 팁</p>
+                <!--메인화면과 온라인 토론 게시판과 연결-->
+                <a href="온라토론게시.html">바로가기
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="conD">
+        <div class="container">
+            <div class="pohoto"></div>
+            <div class="text">
+                <h2>오프라인</h2>
+                <p>신뢰도 높은 만남</p>
+                <p>원하는 분야의 과외 수업을 더 심도있게 들어보자.</p>
+                <p>서로의 지식을 나누자.</p>
+                <!--메인화면과 오프라인 구인게시판과 연결-->
+                <a href="오프구인게시.html">바로가기
+                <span class="fa-solid fa-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--하단바 다른 사이트들과 같은 주소나 단어-->
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>CrossMe</h2>
+                <p>
+                    주소:원광대학교
+                    <!--원광대학교 웹사이트 주소-->
+                    <a href="https://www.wku.ac.kr/index.php">https://www.wku.ac.kr/index.php</a>
+                </p>
+            </div>
+            <nav class="footB">
+                <div>
+                    <h3>마이페이지</h3>
+                    <ul>
+                        <li><a href="#">채팅</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>온라인</h3>
+                    <ul>
+                        <!--메인->온라인질문게시판-->
+                        <li><a href="온라질문게시.html">질문 게시판</a></li>
+                        <!--메인->온라인토론게시판-->
+                        <li><a href="온라토론게시.html">토론 & 토의 게시판</a></li>
+                        <!--메인->온라인공지게시판-->
+                        <li><a href="온라공지게시.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>오프라인</h3>
+                    <ul>
+                        <!--메인->오프라인구인게시판-->
+                        <li><a href="오프구인게시.html">구인 게시판</a></li>
+                        <!--메인->오프라인구직게시판-->
+                        <li><a href="오프구직게시.html">구직 게시판</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>소개</h3>
+                    <ul>
+                        <!--메인->소개개시판-->
+                        <li><a href="소개.html">소개 글</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>문의</h3>
+                    <ul>
+                        <li><a href="#">문의 게시판</a></li>
+                        <li><a href="#">공지 게시판</a></li>
+                        <li><a href="#">신고 게시판</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footC">
+                @ CrossMe corp. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

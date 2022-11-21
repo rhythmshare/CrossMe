@@ -7,9 +7,7 @@
             <!-- Sidebar  -->
 <nav id="sidebar" class="border-top border-secondary">
     <div class="list-group">
-        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light active" href="{{ url_for('freeboard._list')}}">자유게시판</a>
-        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/free/">신고하기</a>
-        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light " href="/pybo/question/list/bug/">버그및건의</a>
+        <a class="rounded-0 list-group-item list-group-item-action list-group-item-light active" href="{{ url_for('freeboard._list')}}">지식공유</a>
     </div>
 </nav>
         </div>
@@ -17,7 +15,7 @@
             <div id="content" class="border-top border-secondary">
                 <div class="content_block">
 
-<h5 class="border-bottom pb-2 mb-3">자유게시판</h5>
+<h5 class="border-bottom pb-2 mb-3">지식공유</h5>
 <div class="row justify-content-between mb-3">
     <div class="col-6">
         <a href="{{ url_for('freeboard.create') }}" class="btn btn-primary">작성하기</a>

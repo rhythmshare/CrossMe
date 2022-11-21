@@ -1,0 +1,406 @@
+@charset "UTF-8";
+
+/*기본 색상*/
+:root {
+    --main-color: #b666d1;
+    --accent-color: #bf6a7a;
+    --dark-main-color: #6f4096;
+    --text-dright-color: #fff;
+    --icon-color: #fff;
+    --iocn-bk-color: #ddd;
+    --larrge-width: 1000px;
+}
+
+/*기본설정: 페이지 전체*/
+body {
+    margin: 0;
+    font-family: 'Noto Serif KR', serif;
+}
+/*콘텐츠A:히어로 이미지*/
+.conA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    min-height: 150vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(img/_81D4432.jpg);
+    background-image: url(img/_81D4432.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    color: var(--text-dright-color);
+    text-align: center;
+}
+.conA h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 48px;
+    font-size: 15vh;
+    letter-spacing: 0.1em;
+    margin-left: 0.1em;
+    background: rgb(14,5,153);
+    background: linear-gradient(90deg, rgba(14,5,153,1) 0%, rgba(157,41,187,1) 49%, rgba(199,0,0,1) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.conA p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.conA a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background-color: #8e5496;
+    background-color: var(--accent-color);
+    color: #fff;
+    color: var(--text-dright-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+.conA a:hover {   /* link 태그에 마우스 오버시 변하는 스타일 설정버튼*/
+    background-image: linear-gradient(
+        rgba(255,255,255,0.2)
+        rgba(255,255,255,0.2)
+    );
+}
+@media (min-width: 768px) {
+    .conA h1 {
+        font-size: 115px;
+    } 
+    .conA p {
+        font-size: 24px;
+    }   
+}
+
+/*콘텐츠B: 개요(아이콘+글자)*/
+.conB .container {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.conB .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.conB h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.conB p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+.conB a {
+    color: #5d9ab2;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.conB a:hover {     
+    text-decoration: underline;
+}
+.conB .icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color:  #ddd;
+    background-color: var(--iocn-bk-color);
+    color: #fff;
+    color: var(--icon-color);
+}
+@media (min-width: 768px) {
+    .conB .container{
+        display: flex;
+        max-width: 1000px;
+        max-width: var(--larrge-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .conB .text {
+        flex: 1;
+    }
+}
+
+/*콘텐츠C: 개요(이미지+글자)*/
+.conC {
+    background-color: #5d9ab2;
+    background-color: var(--main-color);
+    color: #fff;
+    color: var(--text-dright-color);
+}
+.conC .text {
+    padding: 20px;
+}
+.conC h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.conC p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 0.8;
+    opacity: 0.8;
+}
+.conC a {
+    display: inline-block;
+    margin-top: 20px;
+    padding-top: 10px 30px;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background-color: #bf6a7a;
+    background-color: var(--accent-color);
+    color: #bf6a7a;
+    color: var(--text-dright-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+.conC a:hover {
+    background-image: linear-gradient(
+        rgba(255,255,255,0.2), rgba(255,255,2550.2)
+    );
+}
+.conC .pohoto {
+    min-height: 200px;
+    background-image: url(img/technology-gecae5cc5a_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 786px) {
+    .conC .container {
+        display: flex;
+        max-width: 1000px;
+        max-width: var(--larrge-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .conC .pohoto {
+        flex: 3;
+    }
+    .conC .text {
+        flex: 2;
+        padding: 50px;
+    }
+}
+
+/*콘텐츠D: 개요(이미지+글자)*/
+.conD {
+    background-color: #5d9ab2;
+    background-color: var(--dark-main-color);
+    color: #fff;
+    color: var(--text-dright-color);
+}
+.conD .container {
+    padding-top: 2px;
+}
+.conD .text {
+    padding: 20px;
+}
+.conD h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.conD p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 0.8;
+    opacity: 0.8;
+}
+.conD a {
+    display: inline-block;
+    margin-top: 20px;
+    padding-top: 10px 30px;
+    box-shadow: 0 0 0 1px #888;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background-color: #bf6a7a;
+    background-color: var(--accent-color);
+    color: #bf6a7a;
+    color: var(--text-dright-color);
+    font-size: 14px;
+    text-decoration: none;
+}
+.conD a:hover {
+    background-image: linear-gradient(
+        rgba(255,255,255,0.2), rgba(255,255,2550.2)
+    );
+}
+.conD .pohoto {
+    min-height: 200px;
+    background-image: url(img/startup-g78c967d78_1280.jpg);
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 786px) {
+    .conD .container {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1000px;
+        max-width: var(--larrge-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .conD .pohoto {
+        flex: 3;
+    }
+    .conD .text {
+        flex: 2;
+        padding: 50px;
+    }
+}
+
+/*푸터*/
+footer {
+    color: #fff;
+    color: var(--text-dright-color);
+    background-color: rgb(30, 30, 30);
+}
+footer .container {
+    padding: 40px 20px;
+}
+@media (min-width:768px) {
+    footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        max-width: var(--larrge-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footA {
+        flex: 0 0 40%;
+    }
+    .footB {
+        flex: 0 0 60%;
+    }
+    .footC {
+        flex: 0 0 100%;
+    }
+}
+
+/*푸터A: 사이트 정보*/
+.footA {
+    margin-bottom: 30px;
+}
+.footA h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+}
+.footA p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.footA a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*푸터B: 푸터 메뉴*/
+.footB div {
+    margin-bottom: 20px;
+}
+.footB h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-bottom: solid 1px currentColor;
+}
+.footB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footB a {
+    display: block;
+    padding: 5px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+.footB a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+@media (min-width:768px) {
+    .footB {
+        display: flex;
+    }
+    .footB div {
+        flex: 1;
+    }
+    .footB div:not(:first-child) {
+        margin-left: 40px;
+    }
+}
+
+/*푸터C: 저작권*/
+.footC {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*헤더A*/
+.headA {
+    display: inline-block;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #b666d1;
+    background-color: var(--main-color);
+    color: #fff;
+    color: var(--text-dright-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/*헤더B*/
+.headB ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+.headB a:hover {
+    background-color: rgba(0,0,0,0.3);
+}
+@media (min-width:768px) {
+    header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        max-width:  var(--larrge-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .headB ul {
+        display: flex;
+    }
+}

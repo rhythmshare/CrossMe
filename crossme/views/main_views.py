@@ -11,4 +11,5 @@ def hello_crossme():
 
 @bp.route('/')
 def index():
-    return redirect(url_for('freeboard._list'))
+    #return redirect(url_for('freeboard._list'))
+    return redirect(url_for('menu.mainpage'))
